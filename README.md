@@ -1,10 +1,10 @@
-# 🌍 IP Geolocation Reporter (Python)
+# IP Geolocation Reporter (Python)
 
 A Python script that fetches IP geolocation data from an API and sends a structured report to a specified endpoint.
 
 ---
 
-## 📌 Overview
+## Overview
 
 This project uses an external API to collect information about an IP address and sends the data as a JSON report.
 
@@ -17,7 +17,7 @@ You use this to learn:
 
 ---
 
-## ⚙️ Features
+## Features
 
 - Fetch IP data using a geolocation API  
 - Extract useful fields (country, city, ISP, coordinates)  
@@ -26,7 +26,7 @@ You use this to learn:
 
 ---
 
-## 🛠️ How It Works
+## How It Works
 
 - The script sends a request to the IP geolocation API  
 - API returns data in JSON format  
@@ -42,7 +42,7 @@ You use this to learn:
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ### 1. Set your API key and endpoint
 
